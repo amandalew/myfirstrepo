@@ -1,0 +1,43 @@
+body {
+	margin: none;
+	height: 700px;
+	width: 100%;
+}
+h1 {
+	text-align: center;
+	background-color: palegreen;
+	font-size: 50px;
+	font-family: Arial, sans-serif;
+	margin: 0px 50px;
+}
+
+h2 {
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+.button {
+	background-color: white;
+	color: gray;
+	border: solid palegreen 3px;
+	padding: 15px 30px;
+	font-size: 15px;
+}
+
+.bar { 
+	margin-bottom: 10px;
+
+ }
+
+#in {
+ 	text-align: center;
+ }
+
+#exp {
+ 	text-align: center;
+
+}
+
+#prof {
+	text-align: center;
+}

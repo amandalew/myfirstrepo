@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Budget Calculator</title>
+			<link rel="stylesheet" type="text/css" href="css/income_style.css">
+		</head>
+		
+		<body>
+			<h1>Budget Calculator</h1>
+			
+			<h2>Monthly Income:</h2> <!--income-->
+			<form id="in">
+			
+				Person 1: <input type="number" id="a" class="bar"><br/>
+				Person 2: <input type="number" id="b" class="bar"><br/>
+				Person 3: <input type="number" id="c" class="bar"><br/>
+				Other: <input type="number" id="d" class="bar"><br/>
+				
+				Total: <input type="text" id="e" class="bar"> </br>
+				<input type="reset" value="Clear" class = "button"> 
+				<input type="button" class="button" onclick="add1()" value="Total">
+				
+			</form>
+			
+			<h2>Monthly Expenses:</h2> <!--expense-->
+			<form id="exp">
+				Child Care: <input type="number" id="f" class="bar"><br/>
+				Housing: <input type="number" id="g" class="bar"></br>
+				Food: <input type="number" id="h" class="bar"></br>
+				Transportation: <input type="number" id="i" class="bar"></br>
+				Medical: <input type="number" id="j" class="bar"></br>
+				Credit Cards: <input type="number" id="k" class="bar"></br>
+				Insurance: <input type="number" id="l" class="bar"></br>
+					
+
+				Total: <input type="number" id="m" class="bar"></br>
+				<input type="reset" value="Clear" class = "button">  
+				<input type="button" class="button" onclick="add2()" value="Total">
+			</form>
+
+			<h2>Profit</h2> <!--total profit-->
+			<form id="prof">
+				<input type="number" class="bar"></br>
+				<input type="button" class="button" onclick="find()" value= "calculate">	
+
+			</form>
+
+			<script>
+ 				function add1() {
+ 					var p1 = document.getElementById('a').value;
+ 					var p2 = document.getElementById('b').value;
+ 					var p3 = document.getElementById('c').value;
+ 					var Oth = document.getElementById('d').value;
+ 					var answer = parseInt(p1) + parseInt(p2) + parseInt(p3) + parseInt(Oth);
+
+ 					document.getElementById('e').value = answer;
+ 				}
+
+ 				function add2() {
+ 					var e1 = document.getElementById('f').value;
+ 					var e2 = document.getElementById('g').value;
+ 					var e3 = document.getElementById('h').value;
+ 					var e4 = document.getElementById('i').value;
+ 					var e5 = document.getElementById('j').value;
+ 					var e6 = document.getElementById('k').value;
+ 					var e7 = document.getElementById('l').value;
+ 					var answer2 = parseInt(e1) + parseInt(e2) + parseInt(e3) + parseInt(e4) + parseInt(e5) + parseInt(e6) + parseInt(e7);
+
+ 					document.getElementById('m').value = answer2;
+ 				}
+
+ 				function find() {
+ 					var e = document.getElementById('e').value;
+ 					var m = document.getElementById('m').value;
+ 					var stuff = parseInt(e)- parseInt(m);
+ 					
+ 					document.getElementById('remainder').value = stuff;
+ 				}
+
+			</script>
+
+		</body>
+	</html>
